@@ -1,0 +1,239 @@
+html{
+    background-color: rgb(0, 216, 216);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: cursive;
+}
+
+header{
+    background-color: rgb(99, 0, 156);
+    color: rgb(0, 0, 0);
+    border-radius: 12px;
+    border-left: 8px solid rgb(0, 0, 0);
+}
+
+article{
+    background-color: rgb(0, 216, 216);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(99, 0, 156);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 15px 23px rgba(0, 0, 0, 0.495);
+}
+
+section {
+    background-color: rgb(99, 0, 156);
+    display: grid;
+    gap:20px;
+    padding:30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 12px solid rgb(0, 0, 0);
+    border-radius: 12px;
+}
+
+section div {
+    display:grid ;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    margin-top:25px ;
+    
+}
+
+article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 23px rgba(0, 0, 0, 0.704);
+}
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap:20px;
+}
+
+button{
+    background-color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255)
+}
+
+a{
+    text-decoration: none;
+    color: rgb(157, 0, 255);
+}
+
+audio{
+    background-color: rgb(99, 0, 156);
+}
+
+.product-footer{
+    display: block;
+}
+
+.button{    
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+article img /* была лишняя точка перед article */ {
+    margin: 0 auto; 
+}
+
+marquee{
+    color: rgb(255, 0, 0);
+}
+
+.pipecsmall{
+    font-size: 5px;
+}
+
+.bebebebe{
+    font-size: 1px;
+}
+
+/* --- Стили для корзины --- */
+
+/* Контейнер списка товаров */
+#cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+/* Шапка корзины (можно добавить в HTML) */
+.cart-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr 0.5fr;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Элемент строки корзины */
+.cart-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr 0.5fr;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid rgb(0, 0, 0);
+    transition: background 0.2s;
+}
+
+/* Название товара */
+.item-name {
+    font-weight: 600;
+    word-break: break-word;
+    text-align: left;
+}
+
+/* Цена за единицу */
+.item-price {
+    text-align: right;
+}
+
+/* Блок с количеством */
+.item-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Кнопки +/- */
+.quantity-btn {
+    width: 32px;
+    height: 32px;
+    background: rgb(0, 0, 0);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Количество числом */
+.item-quantity span {
+    text-align: center;
+}
+
+/* Итоговая сумма за позицию */
+.item-total {
+    text-align: right;
+    white-space: nowrap;
+    color: rgb(0, 0, 0);
+}
+
+/* Кнопка удаления */
+.remove-btn {
+    background: none;
+    border: none;
+    color: #c00;
+    font-size: 22px;
+    cursor: pointer;
+    justify-self: center;
+    transition: transform 0.2s;
+    padding: 5px;
+}
+
+
+/* Блок с итогом и кнопками управления */
+#cart-total {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(99, 0, 156, 0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#cart-total p {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+#cart-total button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 8px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Сообщение о пустой корзине */
+.empty-cart {
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+}
